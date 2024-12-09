@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Playground</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class=" overflow-auto">
+    <div class="container mx-auto p-8 m-10 max-w-3xl min-w-[640px] overflow-auto">
+        <div class="header grid grid-cols-3 gap-6 mb-8">
+            <div class="control-section">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                    <i class="ri-palette-line mr-2 text-primary-color"></i>Text Color
+                </label>
+                <input class="form-control w-full" type="color" id="colorPicker" value="#3498db">
+            </div>
+
+            <div class="control-section">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                    <i class="ri-checkbox-blank-line mr-2 text-secondary-color"></i>Background Color
+                </label>
+                <input class="form-control w-full" type="color" id="canvasColor" value="#ffffff">
+            </div>
+
+            <div class="control-section">
+                <label class="block mb-2 text-sm font-bold text-gray-700">
+                    <i class="ri-pen-nib-line mr-2 text-accent-color"></i>Line Width
+                </label>
+                <select class="custom-select w-full" id="fontSizePicker">
+                    <option value="1">Thin (1px)</option>
+                    <option value="2">Light (2px)</option>
+                    <option value="3">Medium (3px)</option>
+                    <option value="4">Bold (4px)</option>
+                    <option value="5" selected>Extra Bold (5px)</option>
+                    <option value="10">Massive (10px)</option>
+                </select>
+            </div>
+        </div>
+
+        <canvas id="canvas" class="w-full mb-8"></canvas>
+
+        <div class="footer grid grid-cols-3 gap-6">
+            <button id="clear" class="btn px-6 py-3 bg-red-500 hover:bg-red-600 rounded-lg shadow-lg text-white">
+                <i class="ri-delete-bin-line"></i> Clear
+            </button>
+            <button id="save" class="btn px-6 py-3 bg-green-500 hover:bg-green-600 rounded-lg shadow-lg text-white">
+                <i class="ri-download-2-line"></i> Save
+            </button>
+            <button id="reload" class="btn px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg shadow-lg text-white">
+                <i class="ri-history-line"></i> Retrieve
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
